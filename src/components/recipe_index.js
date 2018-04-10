@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchRecipes } from '../actions';
+import { fetchRandom } from '../actions';
 
 class RecipeIndex extends Component {
   componentDidMount() {
-    this.props.fetchRecipes();
+    this.props.fetchRandom();
   }
 
   renderRandomRecipe() {
@@ -36,4 +36,4 @@ function mapStateToProps(state){
   return { recipes: state.recipes };
 }
 
-export default connect(mapStateToProps, { fetchRecipes })(RecipeIndex);
+export default connect(mapStateToProps, { fetchRandom })(RecipeIndex);
