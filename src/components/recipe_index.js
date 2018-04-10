@@ -5,7 +5,6 @@ import { fetchRecipes } from '../actions';
 class RecipeIndex extends Component {
   componentDidMount() {
     this.props.fetchRecipes();
-    console.log(this.props.fetchRecipes())
   }
 
   render() {
