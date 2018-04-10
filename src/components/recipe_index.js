@@ -12,7 +12,7 @@ class RecipeIndex extends Component {
     return _.map(this.props.recipes, recipe => {
       return (
         <div key={recipe.idMeal}>
-          <h5>{recipe.strMeal}</h5>
+          <h5><a href={recipe.strSource}>{recipe.strMeal}</a></h5>
           <img src={recipe.strMealThumb} />
         </div>
       );
