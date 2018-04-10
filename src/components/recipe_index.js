@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { fetchRecipes } from '../actions';
 
 class RecipeIndex extends Component {
+  componentDidMount() {
+    console.log(this.props.fetchRecipes());
+  }
 
   render() {
     return(
@@ -13,4 +16,4 @@ class RecipeIndex extends Component {
   }
 }
 
-export default RecipeIndex;
+export default connect(null, { fetchRecipes })(RecipeIndex);
