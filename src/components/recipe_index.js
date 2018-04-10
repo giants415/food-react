@@ -11,9 +11,10 @@ class RecipeIndex extends Component {
   renderRandomRecipe() {
     return _.map(this.props.recipes, recipe => {
       return (
-        <p key={recipe.idMeal}>
-          {recipe.strMeal}
-        </p>
+        <div key={recipe.idMeal}>
+          <h5>{recipe.strMeal}</h5>
+          <img src={recipe.strMealThumb} />
+        </div>
       );
     })
   }
