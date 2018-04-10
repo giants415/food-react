@@ -11,6 +11,7 @@ export function fetchRecipes() {
   // this will serve as a landing page option since there will
   //   be no search at launch
   const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
+  console.log(request);
 
   return {
     type: FETCH_RECIPES,
