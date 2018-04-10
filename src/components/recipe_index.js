@@ -11,7 +11,7 @@ class RecipeIndex extends Component {
   renderRandomRecipe() {
     return _.map(this.props.recipes, recipe => {
       return (
-        <p key={recipe.id}>
+        <p key={recipe.idMeal}>
           {recipe.strMeal}
         </p>
       );
@@ -24,7 +24,7 @@ class RecipeIndex extends Component {
         <h2>Recipe Index Page!</h2>
         <div>
           <h4>Random Recipe of the Moment</h4>
-          <p>{this.renderRandomRecipe()}</p>
+          {this.renderRandomRecipe()}
         </div>
       </div>
     );
