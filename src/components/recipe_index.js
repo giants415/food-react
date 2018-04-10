@@ -4,7 +4,7 @@ import { fetchRecipes } from '../actions';
 
 class RecipeIndex extends Component {
   componentDidMount() {
-    console.log(this.props.fetchRecipes());
+    this.props.fetchRecipes();
   }
 
   render() {
@@ -16,4 +16,8 @@ class RecipeIndex extends Component {
   }
 }
 
-export default connect(null, { fetchRecipes })(RecipeIndex);
+function mapStateToProps(state){
+  return { recipes: state.recipes };
+}
+
+export default connect(mapStateToProps, { fetchRecipes })(RecipeIndex);
