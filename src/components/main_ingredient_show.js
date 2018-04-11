@@ -6,6 +6,7 @@ class MainIngredientShow extends Component {
   render() {
     return (
       <div>
+        <h2>Main Ingredient Search Page</h2>
       </div>
     );
   }
