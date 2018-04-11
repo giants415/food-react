@@ -33,7 +33,7 @@ class SearchField extends Component {
           component={this.renderSearchField}
         />
       </form>
-      <button className="btn btn-primary">Search Recipes</button>
+      <button type="submit" className="btn btn-primary">Search Recipes</button>
     );
   }
 }
