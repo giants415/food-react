@@ -12,4 +12,4 @@ class MainIngredientShow extends Component {
   }
 }
 
-export default connect(null, { fetchMainIngredient })(MainIngredientShow);
+export default connect(null, {  })(MainIngredientShow);
