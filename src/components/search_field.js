@@ -6,7 +6,7 @@ class SearchField extends Component {
   render() {
     return (
       <form>
-        
+
       </form>
     );
   }
