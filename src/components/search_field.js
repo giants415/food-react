@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import { fetchMainIngredient } from '../actions';
 
 class SearchField extends Component {
   renderSearchField(field) {
@@ -14,6 +15,12 @@ class SearchField extends Component {
         />
       </div>
     );
+  }
+
+  onSubmit(values) {
+    this.props.fetchMainIngredient(mainIngredient, () =>{
+      this.props.history.push("/main-ingredient");
+    });
   }
 
 
