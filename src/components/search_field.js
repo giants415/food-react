@@ -7,8 +7,13 @@ class SearchField extends Component {
     return (
       <div>
         <label>{field.label}</label>
+        <input
+          className="form-control"
+          type="text"
+          {...field.input}
+        />
       </div>
-    )
+    );
   }
 
 
