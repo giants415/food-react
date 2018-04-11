@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 class SearchField extends Component {
   render() {
     return (
-      <div>
-      </div>
+      <form>
+        
+      </form>
     );
   }
 }
