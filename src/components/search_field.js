@@ -8,7 +8,7 @@ class SearchField extends Component {
       <form>
         <Field
           name="search"
-          component={}
+          component={this.renderSearchField}
         />
       </form>
     );
