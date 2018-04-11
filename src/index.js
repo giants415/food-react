@@ -8,6 +8,7 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import RecipeIndex from './components/recipe_index';
+import MainIngredientShow from './components/main_ingredient_show';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/" component={RecipeIndex} />
+          <Route path="/main-ingredient" component={MainIngredientShow} />
         </Switch>
       </div>
     </BrowserRouter>
