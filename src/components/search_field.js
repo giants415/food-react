@@ -17,7 +17,7 @@ class SearchField extends Component {
     );
   }
 
-  onSubmit(values) {
+  onSubmit(mainIngredient) {
     this.props.fetchMainIngredient(mainIngredient, () =>{
       this.props.history.push("/main-ingredient");
     });
