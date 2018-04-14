@@ -25,8 +25,10 @@ class SearchField extends Component {
 
 
   render() {
+    const { handleSubmit } = this.props;
+
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Search By A Main Ingredient"
           name="search"
