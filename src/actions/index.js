@@ -24,6 +24,6 @@ export function fetchMainIngredient(mainIngredient) {
 
   return {
     type: FETCH_MAIN_INGREDIENT,
-    payload: request;
+    payload: request
   };
 }
