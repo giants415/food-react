@@ -42,4 +42,6 @@ class SearchField extends Component {
 
 export default reduxForm({
   form: 'SearchInputForm'
-});
+})(
+  connect(null,{ fetchMainIngredient })(SearchField)
+);
