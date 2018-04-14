@@ -3,12 +3,17 @@ import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { fetchMainIngredient } from '../actions';
 
+const inputStyle = {
+  width: '300px'
+};
+
 class SearchField extends Component {
   renderSearchField(field) {
     return (
       <div>
         <label>{field.label}</label>
         <input
+          style={inputStyle}
           className="form-control"
           type="text"
           {...field.input}
