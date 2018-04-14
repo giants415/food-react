@@ -21,4 +21,9 @@ export function fetchMainIngredient(mainIngredient) {
   // }
 
   const request = axios.get(`${ROOT_URL}/filter.php?i=${mainIngredient}`);
+
+  return {
+    type: FETCH_MAIN_INGREDIENT,
+    payload: request;
+  };
 }
