@@ -16,10 +16,6 @@ export function fetchRandom() {
 
 export function fetchMainIngredient(mainIngredient) {
   console.log(mainIngredient.search);
-  // function(mainIngredient) {
-  //   console.log(mainIngredient);
-  //   // need to build helper function to format mainIngredient according to API
-  // }
 
   const request = axios.get(`${ROOT_URL}/filter.php?i=${mainIngredient.search}`);
 
