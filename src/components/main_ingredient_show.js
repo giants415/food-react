@@ -1,8 +1,12 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchMainIngredient } from '../actions';
 
 class MainIngredientShow extends Component {
+  
+
+
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
@@ -21,4 +25,9 @@ class MainIngredientShow extends Component {
   }
 }
 
-export default connect(null, {  })(MainIngredientShow);
+function mapStateToProps(state) {
+  return { recipes: state.recipes };
+}
+
+
+export default connect(mapStateToProps, { fetchMainIngredient })(MainIngredientShow);
