@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { fetchMainIngredient } from '../actions';
 
 class MainIngredientShow extends Component {
-  
-
-
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
