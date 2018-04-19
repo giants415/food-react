@@ -29,7 +29,7 @@ class RecipeIndex extends Component {
           <h4>Random Recipe of the Moment</h4>
           {this.renderRandomRecipe()}
         </div>
-
+        <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
       </div>
     );
   }
