@@ -29,7 +29,7 @@ class MainIngredientShow extends Component {
       <div>
         <h2>Main Ingredient Search Page</h2>
         <SearchField />
-        <div>
+        <div className="d-flex flex-row flex-wrap">
           {this.renderRecipes()}
         </div>
       </div>
