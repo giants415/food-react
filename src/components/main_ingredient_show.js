@@ -5,12 +5,19 @@ import { fetchMainIngredient } from '../actions';
 
 import SearchField from './search_field';
 
+const cardStyle = {
+  width: '18rem'
+};
+
 class MainIngredientShow extends Component {
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
-        <div>
-          <p>{recipe.strMeal}</p>
+        <div className="card" style={cardStyle}  key={recipe.idMeal}>
+          <img className="card-img-top" src={recipe.strMealThumb} alt="Recipe" />
+          <div className="card-body">
+            <h5 className="card-title">{recipe.strMeal}</h5>
+          </div>
         </div>
       )
     })
