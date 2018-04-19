@@ -23,9 +23,7 @@ class SearchField extends Component {
   }
 
   onSubmit(mainIngredient) {
-    this.props.fetchMainIngredient(mainIngredient, () =>{
-      this.props.history.push("/main-ingredient");
-    });
+    this.props.fetchMainIngredient(mainIngredient);
   }
 
 
