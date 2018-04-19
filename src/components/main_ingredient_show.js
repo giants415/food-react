@@ -6,7 +6,7 @@ import { fetchMainIngredient } from '../actions';
 import SearchField from './search_field';
 
 const cardStyle = {
-  width: '18rem'
+  width: '15rem'
 };
 
 class MainIngredientShow extends Component {
