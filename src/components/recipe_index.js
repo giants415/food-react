@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRandom } from '../actions';
 
-import SearchField from './search_field';
 
 class RecipeIndex extends Component {
   componentDidMount() {
@@ -29,7 +28,7 @@ class RecipeIndex extends Component {
           <h4>Random Recipe of the Moment</h4>
           {this.renderRandomRecipe()}
         </div>
-        <SearchField />
+
       </div>
     );
   }
