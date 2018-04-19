@@ -17,8 +17,7 @@ export function fetchRandom() {
 export function fetchMainIngredient(mainIngredient, callback) {
   console.log(mainIngredient.search);
 
-  const request = axios.get(`${ROOT_URL}/filter.php?i=${mainIngredient.search}`)
-    .then(() => callback());
+  const request = axios.get(`${ROOT_URL}/filter.php?i=${mainIngredient.search}`);
 
   return {
     type: FETCH_MAIN_INGREDIENT,
