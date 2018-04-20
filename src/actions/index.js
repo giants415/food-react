@@ -26,8 +26,8 @@ export function fetchMainIngredient(mainIngredient, callback) {
   };
 }
 
-export function fetchRecipe(recipeID) {
-  const request = axios.get(`${ROOT_URL}/lookup.php?i=${recipeID}`);
+export function fetchRecipe(selected_recipe_id) {
+  const request = axios.get(`${ROOT_URL}/lookup.php?i=${selected_recipe_id}`);
 
   return {
     type: FETCH_RECIPE,
