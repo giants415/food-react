@@ -11,6 +11,11 @@ const cardStyle = {
 };
 
 class MainIngredientShow extends Component {
+  viewRecipe() {
+
+  }
+
+
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
@@ -18,6 +23,9 @@ class MainIngredientShow extends Component {
           <img className="card-img-top" src={recipe.strMealThumb} alt="Recipe" />
           <div className="card-body">
             <h5 className="card-title">{recipe.strMeal}</h5>
+            <button className="btn btn-outline-primary">
+              View Recipe Details
+            </button>
           </div>
         </div>
       )
