@@ -11,10 +11,9 @@ const cardStyle = {
 };
 
 class MainIngredientShow extends Component {
-  viewRecipe() {
-
+  viewRecipe(selected_recipe_id) {
+    console.log(selected_recipe_id);
   }
-
 
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
@@ -23,7 +22,7 @@ class MainIngredientShow extends Component {
           <img className="card-img-top" src={recipe.strMealThumb} alt="Recipe" />
           <div className="card-body">
             <h5 className="card-title">{recipe.strMeal}</h5>
-            <button className="btn btn-outline-primary">
+            <button className="btn btn-outline-primary" onClick={() => this.viewRecipe(recipe.idMeal)}>
               View Recipe Details
             </button>
           </div>
