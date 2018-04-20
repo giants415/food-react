@@ -26,7 +26,7 @@ export function fetchMainIngredient(mainIngredient, callback) {
   };
 }
 
-export function fetchRecipe() {
+export function fetchRecipe(recipeID) {
   const request = axios.get(`${ROOT_URL}/lookup.php?i=${recipeID}`);
 
   return {
