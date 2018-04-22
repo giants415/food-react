@@ -7,7 +7,7 @@ const cardStyle = {
   margin: '0 10px 10px 10px'
 };
 
-class Recipe extends Component {
+class RecipeCard extends Component {
   viewRecipe = () => {
     console.log(this.props.id);
     this.props.fetchRecipe(this.props.id);
@@ -33,4 +33,4 @@ class Recipe extends Component {
   }
 }
 
-export default connect(null, { fetchRecipe })(Recipe);
+export default connect(null, { fetchRecipe })(RecipeCard);
