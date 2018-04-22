@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+const cardStyle = {
+  width: '15rem',
+  margin: '0 10px 10px 10px'
+};
+
 class Recipe extends Component {
   render() {
     const {

@@ -5,11 +5,6 @@ import { fetchMainIngredient } from '../actions';
 
 import SearchField from './search_field';
 
-const cardStyle = {
-  width: '15rem',
-  margin: '0 10px 10px 10px'
-};
-
 class MainIngredientShow extends Component {
   viewRecipe(selected_recipe_id) {
     console.log(selected_recipe_id);
