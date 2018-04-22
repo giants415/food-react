@@ -30,3 +30,5 @@ class Recipe extends Component {
     );
   }
 }
+
+export default Recipe;
