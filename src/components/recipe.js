@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchRecipe } from '../actions';
 
 const cardStyle = {
   width: '15rem',
@@ -31,4 +32,4 @@ class Recipe extends Component {
   }
 }
 
-export default Recipe;
+export default connect(null, { fetchRecipe })(Recipe);
