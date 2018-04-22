@@ -10,6 +10,7 @@ const cardStyle = {
 class Recipe extends Component {
   viewRecipe = () => {
     console.log(this.props.id);
+    this.props.fetchRecipe(this.props.id);
   }
 
   render() {
