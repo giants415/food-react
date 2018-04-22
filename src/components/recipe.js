@@ -7,6 +7,10 @@ const cardStyle = {
 };
 
 class Recipe extends Component {
+  viewRecipe(selected_recipe_id) {
+    console.log(selected_recipe_id);
+  }
+
   render() {
     const {
       name,

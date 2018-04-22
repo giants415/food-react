@@ -6,10 +6,6 @@ import { fetchMainIngredient } from '../actions';
 import SearchField from './search_field';
 
 class MainIngredientShow extends Component {
-  viewRecipe(selected_recipe_id) {
-    console.log(selected_recipe_id);
-  }
-
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
