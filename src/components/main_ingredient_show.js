@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMainIngredient } from '../actions';
 
-import Recipe from './recipe';
+import RecipeCard from './recipe-card';
 
 import SearchField from './search_field';
 
@@ -11,13 +11,13 @@ class MainIngredientShow extends Component {
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
       return (
-        <Recipe
+        <RecipeCard
           key={recipe.idMeal}
           id={recipe.idMeal}
           thumbnail={recipe.strMealThumb}
           name={recipe.strMeal}
         />
-      );  
+      );
     })
   }
 
