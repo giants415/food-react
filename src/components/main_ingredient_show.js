@@ -10,12 +10,14 @@ import SearchField from './search_field';
 class MainIngredientShow extends Component {
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
-      <Recipe
-        key={recipe.idMeal}
-        id={recipe.idMeal}
-        thumbnail={recipe.strMealThumb}
-        name={recipe.strMeal}
-      />
+      return (
+        <Recipe
+          key={recipe.idMeal}
+          id={recipe.idMeal}
+          thumbnail={recipe.strMealThumb}
+          name={recipe.strMeal}
+        />
+      );  
     })
   }
 
