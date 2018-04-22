@@ -3,22 +3,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMainIngredient } from '../actions';
 
+import Recipe from './recipe';
+
 import SearchField from './search_field';
 
 class MainIngredientShow extends Component {
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
-      return (
-        <div className="card" style={cardStyle}  key={recipe.idMeal}>
-          <img className="card-img-top" src={recipe.strMealThumb} alt="Recipe" />
-          <div className="card-body">
-            <h5 className="card-title">{recipe.strMeal}</h5>
-            <button className="btn btn-outline-primary" onClick={() => this.viewRecipe(recipe.idMeal)}>
-              View Recipe Details
-            </button>
-          </div>
-        </div>
-      )
+      <Recipe
+        key={recipe.idMeal}
+        id={recipe.idMeal}
+        thumbnail={recipe.strMealThumb}
+        name={recipe.strMeal}
+      />
     })
   }
 
