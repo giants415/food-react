@@ -22,7 +22,7 @@ class Recipe extends Component {
         <img className="card-img-top" src={thumbnail} alt="Recipe" />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
-          <button className="btn btn-outline-primary" onClick={this.onViewDetails}>
+          <button className="btn btn-outline-primary" onClick={this.viewRecipe}>
             View Recipe Details
           </button>
         </div>
