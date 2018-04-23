@@ -20,7 +20,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/main-ingredient" component={MainIngredientShow} />
-          <Route path="/main-ingredient/:id" component={RecipeShow} />
+          <Route path="/:id" component={RecipeShow} />
           <Route path="/" component={RecipeIndex} />
         </Switch>
       </div>
