@@ -16,8 +16,6 @@ export function fetchRandom() {
 }
 
 export function fetchMainIngredient(mainIngredient) {
-  console.log(mainIngredient.search);
-
   const request = axios.get(`${ROOT_URL}/filter.php?i=${mainIngredient.search}`);
 
   return {
@@ -27,7 +25,6 @@ export function fetchMainIngredient(mainIngredient) {
 }
 
 export function fetchRecipe(id) {
-  console.log('actions ' + id);
   const request = axios.get(`${ROOT_URL}/lookup.php?i=${id}`);
 
   return {
