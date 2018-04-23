@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchRecipe } from '../actions';
 
 class RecipeShow extends Component {
@@ -18,11 +19,11 @@ class RecipeShow extends Component {
       return (
         <div>
           <h3>
-            The recipe you are looking for does not exist.
+            Sorry, the recipe you are looking for does not exist.
             <br/>
             Please retry your search
           </h3>
-          <button>Search</button>
+          <Link to="/main-ingredient" className="btn btn-warning">Search</Link>
         </div>
       );
     }
