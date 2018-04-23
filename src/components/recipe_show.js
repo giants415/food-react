@@ -7,14 +7,24 @@ class RecipeShow extends Component {
     console.log(this.props.match.params.id);
     const id = this.props.match.params.id;
     this.props.fetchRecipe(id);
-    console.log('props', this.props);
   }
 
   render() {
     const { recipe } = this.props;
+    console.log(this.props.recipe);
 
     if (!recipe) {
-      return <div>Loading...</div>;
+      console.log(this.props);
+      return (
+        <div>
+          <h3>
+            The recipe you are looking for does not exist.
+            <br/>
+            Please retry your search
+          </h3>
+          <button>Search</button>
+        </div>
+      );
     }
 
     return(
