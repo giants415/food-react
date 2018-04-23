@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchRecipe } from '../actions';
 
+const imgStyle = {
+  width: '400px'
+}
+
 class RecipeShow extends Component {
   componentDidMount() {
     console.log(this.props.match.params.id);
@@ -31,6 +35,7 @@ class RecipeShow extends Component {
     return(
       <div>
         <h2>Selected Recipe: {recipe.strMeal}</h2>
+        <img src={recipe.strMealThumb} style={imgStyle}/>
       </div>
     );
   }
