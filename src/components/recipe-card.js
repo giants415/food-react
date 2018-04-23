@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchRecipe } from '../actions';
 
 const cardStyle = {
@@ -8,16 +9,11 @@ const cardStyle = {
 };
 
 class RecipeCard extends Component {
-  viewRecipe = () => {
-    console.log(this.props.id);
-    this.props.fetchRecipe(this.props.id);
-
-  }
-
   render() {
     const {
       name,
-      thumbnail
+      thumbnail,
+      id
     } = this.props;
 
     return (
@@ -25,9 +21,9 @@ class RecipeCard extends Component {
         <img className="card-img-top" src={thumbnail} alt="Recipe" />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
-          <button className="btn btn-outline-primary" onClick={this.viewRecipe}>
+          <Link to={`/${id}`}>
             View Recipe Details
-          </button>
+          </Link>
         </div>
       </div>
     );
