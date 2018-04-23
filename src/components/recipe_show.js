@@ -30,8 +30,7 @@ class RecipeShow extends Component {
 
     return(
       <div>
-        <h2>Selected Recipe:</h2>
-        <h3>{recipe.strMeal}</h3>
+        <h2>Selected Recipe: {recipe.strMeal}</h2>
       </div>
     );
   }
