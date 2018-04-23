@@ -9,6 +9,7 @@ import promise from 'redux-promise';
 import reducers from './reducers';
 import RecipeIndex from './components/recipe_index';
 import MainIngredientShow from './components/main_ingredient_show';
+import RecipeShow from './components/recipe_show';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
