@@ -8,8 +8,12 @@ export default function(state = {}, action) {
     case FETCH_MAIN_INGREDIENT:
       return _.mapKeys(action.payload.data.meals, 'idMeal');
     case FETCH_RECIPE:
-      console.log(action.payload.data.meals[0]);
-      return action.payload.data.meals[0];
+      const response = action.payload.data.meals;
+      if (!response) {
+        return false;
+      } else {
+        return response[0];
+      }
     default:
       return state;
   }
