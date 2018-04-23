@@ -19,8 +19,8 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/recipe-view" component={RecipeShow} />
           <Route path="/main-ingredient" component={MainIngredientShow} />
+          <Route path="/main-ingredient/:id" component={RecipeShow} />
           <Route path="/" component={RecipeIndex} />
         </Switch>
       </div>
