@@ -28,7 +28,7 @@ class RecipeIndex extends Component {
 
   render() {
     return(
-      <div>
+      <div className="text-center">
         <h2>Recipe Index Page!</h2>
         <div>
           <h4>Random Recipe of the Moment</h4>
