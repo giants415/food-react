@@ -19,7 +19,6 @@ class RecipeShow extends Component {
     console.log(this.props.recipe);
 
     if (!recipe) {
-      console.log(this.props);
       return (
         <div>
           <h3>
