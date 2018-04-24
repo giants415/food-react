@@ -15,6 +15,7 @@ class MainIngredientShow extends Component {
           id={recipe.idMeal}
           thumbnail={recipe.strMealThumb}
           name={recipe.strMeal}
+          alt="random recipe display"
         />
       );
     })
