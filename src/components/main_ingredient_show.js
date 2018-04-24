@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { fetchMainIngredient } from '../actions';
 
 import RecipeCard from './recipe-card';
-
 import SearchField from './search_field';
 
 class MainIngredientShow extends Component {
