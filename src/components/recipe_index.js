@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchRandom } from '../actions';
 
+import RecipeCard from './recipe-card';
+
 
 class RecipeIndex extends Component {
   componentDidMount() {
@@ -13,10 +15,13 @@ class RecipeIndex extends Component {
   renderRandomRecipe() {
     return _.map(this.props.recipes, recipe => {
       return (
-        <div key={recipe.idMeal}>
-          <h5><a href={recipe.strSource}>{recipe.strMeal}</a></h5>
-          <img height="300px" src={recipe.strMealThumb} alt="random recipe display"/>
-        </div>
+        <RecipeCard
+          key={recipe.idMeal}
+          id={recipe.idMeal}
+          thumbnail={recipe.strMealThumb}
+          name={recipe.strMeal}
+          alt="random recipe display"
+        />
       );
     })
   }
