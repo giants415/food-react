@@ -32,7 +32,7 @@ class RecipeShow extends Component {
     }
 
     return(
-      <div>
+      <div className="row">
         <h2>Selected Recipe: {recipe.strMeal}</h2>
         <img src={recipe.strMealThumb} style={imgStyle}/>
         <br />
