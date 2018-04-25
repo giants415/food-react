@@ -37,10 +37,12 @@ class RecipeShow extends Component {
 
     return(
       <div className="row" style={row}>
-        <h2>Selected Recipe: {recipe.strMeal}</h2>
-        <img src={recipe.strMealThumb} style={imgStyle}/>
-        <br />
-        <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
+        <div className="col-lg-4">
+          <h2>Selected Recipe:{recipe.strMeal}</h2>
+          <img src={recipe.strMealThumb} style={imgStyle}/>
+          <br />
+          <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
+        </div>
       </div>
     );
   }
