@@ -17,7 +17,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-      <div className="container-fluid">
+      <div>
         <Switch>
           <Route path="/main-ingredient" component={MainIngredientShow} />
           <Route path="/:id" component={RecipeShow} />
