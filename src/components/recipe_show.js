@@ -44,6 +44,14 @@ class RecipeShow extends Component {
           <br />
           <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
         </div>
+        <div className="col-lg-6">
+          <div className="col-lg-3">
+            <h4>Ingredients</h4>
+          </div>
+          <div className="col-lg-3">
+            <h4>Measurements</h4>
+          </div>
+        </div>
       </div>
     );
   }
