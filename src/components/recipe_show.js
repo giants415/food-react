@@ -7,6 +7,10 @@ const imgStyle = {
   width: '400px'
 }
 
+const row = {
+  flexDirection: 'column'
+}
+
 class RecipeShow extends Component {
   componentDidMount() {
     console.log(this.props.match.params.id);
@@ -32,7 +36,7 @@ class RecipeShow extends Component {
     }
 
     return(
-      <div className="row">
+      <div className="row" style={row}>
         <h2>Selected Recipe: {recipe.strMeal}</h2>
         <img src={recipe.strMealThumb} style={imgStyle}/>
         <br />
