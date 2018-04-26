@@ -13,7 +13,6 @@ const row = {
 
 class RecipeShow extends Component {
   componentDidMount() {
-    console.log(this.props.match.params.id);
     const id = this.props.match.params.id;
     this.props.fetchRecipe(id);
   }
