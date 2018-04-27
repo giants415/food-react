@@ -20,6 +20,9 @@ class RecipeIndex extends Component {
 
   renderRandomRecipe() {
     return _.map(this.props.recipes, recipe => {
+      if (!recipe) {
+        return <div>Recipe is cooking...</div>;
+      }
       return (
         <RecipeCard
           key={recipe.idMeal}
