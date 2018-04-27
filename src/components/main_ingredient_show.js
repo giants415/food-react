@@ -33,7 +33,7 @@ class MainIngredientShow extends Component {
       <div style={thisStyle}>
         <h2>Search for Recipes by Main Ingredient</h2>
         <SearchField />
-        <div className="d-flex flex-row flex-wrap">
+        <div className="d-flex justify-content-between flex-row flex-wrap">
           {this.renderRecipes()}
         </div>
       </div>
