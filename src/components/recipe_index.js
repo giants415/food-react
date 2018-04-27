@@ -6,6 +6,12 @@ import { fetchRandom } from '../actions';
 
 import RecipeCard from './recipe-card';
 
+const style = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+}
+
 
 class RecipeIndex extends Component {
   componentDidMount() {
@@ -28,10 +34,10 @@ class RecipeIndex extends Component {
 
   render() {
     return(
-      <div className="text-center">
+      <div style={style}>
         <h2>Recipe Index Page!</h2>
+        <h4>Random Recipe of the Moment</h4>
         <div>
-          <h4>Random Recipe of the Moment</h4>
           {this.renderRandomRecipe()}
         </div>
         <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
