@@ -5,7 +5,7 @@ import { fetchRecipe } from '../actions';
 
 const cardStyle = {
   width: '15rem',
-  margin: '0 10px 10px 10px'
+  margin: '10px'
 };
 
 class RecipeCard extends Component {
