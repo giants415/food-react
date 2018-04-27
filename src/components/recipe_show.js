@@ -36,6 +36,7 @@ class RecipeShow extends Component {
 
     return(
       <div className="row">
+        <Link to="/" className="btn btn-danger">Home</Link>
         <div className="col-lg-6" style={row}>
           <h2>Selected Recipe:</h2>
           <h3>{recipe.strMeal}</h3>
