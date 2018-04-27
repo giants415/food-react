@@ -13,7 +13,8 @@ const newStyle = {
 
 const button = {
   height: '38px',
-  marginTop: '32px'
+  marginTop: '32px',
+  marginLeft: '5px'
 }
 
 class SearchField extends Component {
