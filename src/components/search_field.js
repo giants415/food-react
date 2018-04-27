@@ -13,7 +13,7 @@ const newStyle = {
 
 const button = {
   height: '38px',
-  marginTop: '32px',
+  marginTop: '24px',
   marginLeft: '5px'
 }
 
