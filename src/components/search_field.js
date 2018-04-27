@@ -7,6 +7,15 @@ const inputStyle = {
   width: '300px'
 };
 
+const newStyle = {
+  display: 'flex'
+};
+
+const button = {
+  height: '38px',
+  marginTop: '32px'
+}
+
 class SearchField extends Component {
   renderSearchField(field) {
     return (
@@ -31,13 +40,13 @@ class SearchField extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <form style={newStyle} onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
-          label="Search By A Main Ingredient"
+          label="Search for Recipes by Main Ingredient"
           name="search"
           component={this.renderSearchField}
         />
-        <button type="submit" className="btn btn-primary">Search Recipes</button>
+      <button style={button} type="submit" className="btn btn-primary">Search Recipes</button>
       </form>
     );
   }
