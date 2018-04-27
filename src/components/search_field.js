@@ -43,7 +43,6 @@ class SearchField extends Component {
     return (
       <form style={newStyle} onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
-          label="Search for Recipes by Main Ingredient"
           name="search"
           component={this.renderSearchField}
         />
