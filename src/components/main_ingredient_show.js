@@ -6,6 +6,12 @@ import { fetchMainIngredient } from '../actions';
 import RecipeCard from './recipe-card';
 import SearchField from './search_field';
 
+const thisStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+}
+
 class MainIngredientShow extends Component {
   renderRecipes() {
     return _.map(this.props.recipes, recipe => {
@@ -24,7 +30,7 @@ class MainIngredientShow extends Component {
   render() {
     console.log(this.props.recipes);
     return (
-      <div>
+      <div style={thisStyle}>
         <h2>Main Ingredient Search Page</h2>
         <SearchField />
         <div className="d-flex flex-row flex-wrap">
