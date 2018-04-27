@@ -35,11 +35,9 @@ class RecipeIndex extends Component {
   render() {
     return(
       <div style={style}>
-        <h2>Recipe Index Page!</h2>
+        <h2>Welcome to Recipe Finder!</h2>
         <h4>Random Recipe of the Moment</h4>
-        <div>
-          {this.renderRandomRecipe()}
-        </div>
+        {this.renderRandomRecipe()}
         <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
       </div>
     );
