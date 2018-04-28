@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchMainIngredient } from '../actions';
 
 import RecipeCard from './recipe-card';
@@ -33,7 +32,6 @@ class MainIngredientShow extends Component {
     return (
       <div style={thisStyle}>
         <h2>Search for Recipes by Main Ingredient</h2>
-        <Link to="/" className="btn btn-success">Home</Link>
         <SearchField />
         <div className="d-flex justify-content-between flex-row flex-wrap">
           {this.renderRecipes()}
