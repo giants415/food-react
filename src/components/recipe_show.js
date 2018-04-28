@@ -40,7 +40,7 @@ class RecipeShow extends Component {
         <div className="col-lg-6" style={row}>
           <h2>Selected Recipe:</h2>
           <h3>{recipe.strMeal}</h3>
-          <img src={recipe.strMealThumb} style={imgStyle}/>
+          <img src={recipe.strMealThumb} style={imgStyle} alt={recipe.strMeal}/>
           <br />
           <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
         </div>
