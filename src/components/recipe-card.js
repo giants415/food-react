@@ -17,7 +17,7 @@ class RecipeCard extends Component {
     } = this.props;
 
     return (
-      <div className="card" style={cardStyle}>
+      <div className="card" style={cardStyle} key={id}>
         <img className="card-img-top" src={thumbnail} alt="Recipe" />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
