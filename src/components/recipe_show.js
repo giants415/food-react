@@ -18,7 +18,7 @@ class RecipeShow extends Component {
   }
 
   renderIngredients(recipe) {
-    
+
   }
 
   render() {
@@ -50,7 +50,7 @@ class RecipeShow extends Component {
         <div className="col-lg-6">
           <div className="col-lg-3">
             <h4>Ingredients</h4>
-            {this.renderIngredients(recipe)};
+            {this.renderIngredients(recipe)}
           </div>
           <div className="col-lg-3">
             <h4>Measurements</h4>
