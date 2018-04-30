@@ -19,15 +19,10 @@ class RecipeShow extends Component {
 
   renderIngredients(recipe) {
     const ingredients = [];
-    const measurements = [];
     for (var key in recipe) {
       let checker = key.slice(0,13);
-      let measureChecker = key.slice(0,9);
       if (checker === 'strIngredient' && recipe[key] !== '') {
         ingredients.push(recipe[key]);
-      }
-      if (measureChecker === 'strMeasure' && recipe[key] !== '') {
-        measurements.push(recipe[key]);
       }
     }
     const ingredientItems = ingredients.map((ingredient) => {
@@ -35,12 +30,23 @@ class RecipeShow extends Component {
         <p key={ingredient}>{ingredient}</p>
       )
     });
+    return ingredientItems;
+  }
+
+  renderMeasurements(recipe) {
+    const measurements = [];
+    for (var key in recipe) {
+      let measureChecker = key.slice(0,10);
+      if (measureChecker === 'strMeasure' && recipe[key] !== '') {
+        measurements.push(recipe[key]);
+      }
+    }
     const measureItems = measurements.map((measurement) => {
       return (
         <p key={measurement}>{measurement}</p>
       )
     });
-    return ingredientItems, measureItems;
+    return measureItems;
   }
 
   render() {
@@ -82,6 +88,7 @@ class RecipeShow extends Component {
           </div>
           <div className="col-lg-3">
             <h4>Measurements</h4>
+            {this.renderMeasurements(recipe)}
           </div>
         </div>
       </div>
