@@ -18,12 +18,15 @@ class RecipeShow extends Component {
   }
 
   renderIngredients(recipe) {
+    const ingredients = [];
+    const measurements = [];
     for (var key in recipe) {
       let checker = key.slice(0,13);
-      if (checker === 'strIngredient') {
-        console.log(recipe[key] !== '');
+      if (checker === 'strIngredient' && recipe[key] !== '') {
+        ingredients.push(recipe[key]);
       }
     }
+    console.log(ingredients);
   }
 
   render() {
