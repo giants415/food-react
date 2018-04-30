@@ -26,7 +26,12 @@ class RecipeShow extends Component {
         ingredients.push(recipe[key]);
       }
     }
-    console.log(ingredients);
+    const ingredientItems = ingredients.map((ingredient) => {
+      return (
+        <p key={ingredient}>{ingredient}</p>
+      )
+    });
+    return ingredientItems;
   }
 
   render() {
