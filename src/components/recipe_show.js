@@ -18,7 +18,12 @@ class RecipeShow extends Component {
   }
 
   renderIngredients(recipe) {
-
+    for (var key in recipe) {
+      let checker = key.slice(0,13);
+      if (checker === 'strIngredient') {
+        console.log(recipe[key] !== '');
+      }
+    }
   }
 
   render() {
@@ -46,6 +51,10 @@ class RecipeShow extends Component {
           <img src={recipe.strMealThumb} style={imgStyle} alt={recipe.strMeal}/>
           <br />
           <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
+          <h4>Directions</h4>
+          <p>
+            {recipe.strInstructions}
+          </p>
         </div>
         <div className="col-lg-6">
           <div className="col-lg-3">
