@@ -44,19 +44,21 @@ class RecipeShow extends Component {
     }
 
     return(
-      <div className="row">
-        <div className="col-lg-6" style={row}>
-          <h2>Selected Recipe:</h2>
-          <h3>{recipe.strMeal}</h3>
-          <img src={recipe.strMealThumb} style={imgStyle} alt={recipe.strMeal}/>
-          <br />
-          <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
-          <h4>Directions</h4>
-          <p>
-            {recipe.strInstructions}
-          </p>
+      <div>
+        <div className="row">
+          <div className="col-lg-6" style={row}>
+            <h2>Selected Recipe:</h2>
+            <h3>{recipe.strMeal}</h3>
+            <img src={recipe.strMealThumb} style={imgStyle} alt={recipe.strMeal}/>
+            <br />
+            <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
+            <h4>Directions</h4>
+            <p>
+              {recipe.strInstructions}
+            </p>
+          </div>
         </div>
-        <div className="col-lg-6">
+        <div className="row">
           <div className="col-lg-3">
             <h4>Ingredients</h4>
             {this.renderIngredients(recipe)}
