@@ -21,8 +21,10 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-        <Link to="/" className="btn btn-success" style={spacing}>Home</Link>
-        <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
+        <div className="d-flex justify-content-center p-2">
+          <Link to="/" className="btn btn-success" style={spacing}>Home</Link>
+          <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
+        </div>
         <Switch>
           <Route path="/main-ingredient" component={MainIngredientShow} />
           <Route path="/:id" component={RecipeShow} />
