@@ -17,6 +17,10 @@ class RecipeShow extends Component {
     this.props.fetchRecipe(id);
   }
 
+  renderIngredients(recipe) {
+    
+  }
+
   render() {
     const { recipe } = this.props;
     console.log(this.props.recipe);
@@ -46,6 +50,7 @@ class RecipeShow extends Component {
         <div className="col-lg-6">
           <div className="col-lg-3">
             <h4>Ingredients</h4>
+            {this.renderIngredients(recipe)};
           </div>
           <div className="col-lg-3">
             <h4>Measurements</h4>
