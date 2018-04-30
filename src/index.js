@@ -13,12 +13,16 @@ import RecipeShow from './components/recipe_show';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
+const spacing = {
+  marginRight: '10px'
+}
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-        <Link to="/" className="btn btn-success">Home</Link>
+        <Link to="/" className="btn btn-success" style={spacing}>Home</Link>
+        <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
         <Switch>
           <Route path="/main-ingredient" component={MainIngredientShow} />
           <Route path="/:id" component={RecipeShow} />
