@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchRandom } from '../actions';
 
@@ -41,7 +40,6 @@ class RecipeIndex extends Component {
         <h2>Welcome to Recipe Finder!</h2>
         <h4>Random Recipe of the Moment</h4>
         {this.renderRandomRecipe()}
-        <Link to="/main-ingredient" className="btn btn-primary">Search By Main Ingredient</Link>
       </div>
     );
   }
