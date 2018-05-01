@@ -89,8 +89,8 @@ class RecipeShow extends Component {
             {this.renderMeasurements(recipe)}
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-6">
+        <div className="row text-center">
+          <div className="mx-auto col-lg-8">
             <h4>Directions</h4>
             <p>
               {recipe.strInstructions}
