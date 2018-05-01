@@ -77,6 +77,9 @@ class RecipeShow extends Component {
             <img src={recipe.strMealThumb} style={imgStyle} alt={recipe.strMeal}/>
             <br />
             <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
+          </div>
+
+          <div className="col-lg-6">
             <h4>Directions</h4>
             <p>
               {recipe.strInstructions}
