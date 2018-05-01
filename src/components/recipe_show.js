@@ -47,7 +47,9 @@ class RecipeShow extends Component {
     //   measureObj[measurement] = measurements[measurement];
     // }
     return measurements.map((measurement) => {
-       <p>{measurement}</p>
+       return (
+        <p>{measurement}</p>
+       )
       });
     // console.log(measureObj[0]);
     // return _.map((measureObj) => {
