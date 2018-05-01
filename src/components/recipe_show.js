@@ -80,15 +80,6 @@ class RecipeShow extends Component {
             <br />
             <a className="btn btn-primary" href={recipe.strYoutube}>View on YouTube</a>
           </div>
-
-          <div className="col-lg-6">
-            <h4>Directions</h4>
-            <p>
-              {recipe.strInstructions}
-            </p>
-          </div>
-        </div>
-        <div className="row">
           <div className="col-lg-2 text-center">
             <h4>Ingredients</h4>
             {this.renderIngredients(recipe)}
@@ -96,6 +87,14 @@ class RecipeShow extends Component {
           <div className="col-lg-2">
             <h4>Measurements</h4>
             {this.renderMeasurements(recipe)}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-6">
+            <h4>Directions</h4>
+            <p>
+              {recipe.strInstructions}
+            </p>
           </div>
         </div>
       </div>
