@@ -87,11 +87,11 @@ class RecipeShow extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <h4>Ingredients</h4>
             {this.renderIngredients(recipe)}
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <h4>Measurements</h4>
             {this.renderMeasurements(recipe)}
           </div>
