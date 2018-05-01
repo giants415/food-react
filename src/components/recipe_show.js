@@ -28,7 +28,9 @@ class RecipeShow extends Component {
     }
     const ingredientItems = ingredients.map((ingredient) => {
       return (
-        <p key={ingredient}>{ingredient}</p>
+        <p key={ingredient}>
+          {ingredient}
+        </p>
       )
     });
     return ingredientItems;
@@ -87,7 +89,7 @@ class RecipeShow extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-2">
+          <div className="col-lg-2 text-center">
             <h4>Ingredients</h4>
             {this.renderIngredients(recipe)}
           </div>
