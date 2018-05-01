@@ -36,32 +36,19 @@ class RecipeShow extends Component {
 
   renderMeasurements(recipe) {
     const measurements = [];
-    // const measureObj = {}
     for (var key in recipe) {
       let measureChecker = key.slice(0,10);
       if (measureChecker === 'strMeasure' && recipe[key] !== '') {
         measurements.push(recipe[key]);
       }
     }
-    // for (var measurement in measurements) {
-    //   measureObj[measurement] = measurements[measurement];
-    // }
-    return measurements.map((measurement) => {
+    return measurements.map((measurement, i) => {
        return (
-        <p>{measurement}</p>
+        <p key={i}>
+          {measurement}
+        </p>
        )
-      });
-    // console.log(measureObj[0]);
-    // return _.map((measureObj) => {
-    //   console.log(measureObj);
-    //   // return (
-    //   //   <p>{measureObj}</p>
-    //   // );
-    // })
-    // const measureItems = _.mapValues(measureObj, (item) => {
-    //   console.log(measureObj.keys(measureObj));
-    //   console.log(item[measureObj]);
-    // })
+    });
   }
 
   render() {
