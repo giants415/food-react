@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -35,18 +36,30 @@ class RecipeShow extends Component {
 
   renderMeasurements(recipe) {
     const measurements = [];
+    // const measureObj = {}
     for (var key in recipe) {
       let measureChecker = key.slice(0,10);
       if (measureChecker === 'strMeasure' && recipe[key] !== '') {
         measurements.push(recipe[key]);
       }
     }
-    const measureItems = measurements.map((measurement) => {
-      return (
-        <p key={measurement}>{measurement}</p>
-      )
-    });
-    return measureItems;
+    // for (var measurement in measurements) {
+    //   measureObj[measurement] = measurements[measurement];
+    // }
+    return measurements.map((measurement) => {
+       <p>{measurement}</p>
+      });
+    // console.log(measureObj[0]);
+    // return _.map((measureObj) => {
+    //   console.log(measureObj);
+    //   // return (
+    //   //   <p>{measureObj}</p>
+    //   // );
+    // })
+    // const measureItems = _.mapValues(measureObj, (item) => {
+    //   console.log(measureObj.keys(measureObj));
+    //   console.log(item[measureObj]);
+    // })
   }
 
   render() {
