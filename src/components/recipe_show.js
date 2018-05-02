@@ -25,9 +25,9 @@ class RecipeShow extends Component {
         ingredients.push(recipe[key]);
       }
     }
-    const ingredientItems = ingredients.map((ingredient) => {
+    const ingredientItems = ingredients.map((ingredient, i) => {
       return (
-        <p key={ingredient}>
+        <p key={i}>
           {ingredient}
         </p>
       )
