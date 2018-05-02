@@ -18,20 +18,19 @@ class RecipeIndex extends Component {
   }
 
   renderRandomRecipe() {
-    return _.map(this.props.recipes, recipe => {
-      if (!recipe) {
-        return <div>Recipe is cooking...</div>;
-      }
-      return (
-        <RecipeCard
-          key={recipe.idMeal}
-          id={recipe.idMeal}
-          thumbnail={recipe.strMealThumb}
-          name={recipe.strMeal}
-          alt="random recipe display"
-        />
-      );
-    })
+    let random = this.props.randomRecipe;
+    if (!random) {
+      return <div>Recipe is cooking...</div>;
+    }
+    return (
+      <RecipeCard
+        key={random.idMeal}
+        id={random.idMeal}
+        thumbnail={random.strMealThumb}
+        name={random.strMeal}
+        alt="random recipe display"
+      />
+    );
   }
 
   render() {
@@ -46,7 +45,7 @@ class RecipeIndex extends Component {
 }
 
 function mapStateToProps(state){
-  return { recipes: state.recipes };
+  return { randomRecipe: state.randomRecipe };
 }
 
 export default connect(mapStateToProps, { fetchRandom })(RecipeIndex);
