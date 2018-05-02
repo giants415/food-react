@@ -14,7 +14,14 @@ const thisStyle = {
 
 class MainIngredientShow extends Component {
   renderRecipes() {
-    console.log(this.props.recipes);
+    if (this.props.recipes.idMeal !== undefined) {
+      return (
+        <div>
+          <h2>An error happened but its ok!</h2>
+          <p>Please enter a main ingredient and click search</p>
+        </div>
+      );
+    }
     return _.map(this.props.recipes, recipe => {
       return (
         <RecipeCard
