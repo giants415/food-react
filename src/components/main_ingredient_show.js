@@ -14,6 +14,7 @@ const thisStyle = {
 
 class MainIngredientShow extends Component {
   renderRecipes() {
+    console.log(this.props.recipes);
     return _.map(this.props.recipes, recipe => {
       return (
         <RecipeCard
@@ -28,7 +29,6 @@ class MainIngredientShow extends Component {
   }
 
   render() {
-    console.log(this.props.recipes);
     return (
       <div style={thisStyle}>
         <h2>Search for Recipes by Main Ingredient</h2>
