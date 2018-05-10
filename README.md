@@ -1,5 +1,7 @@
 # Recipe Finder
 
+[Check out the project](https://recipe-finder-1801.herokuapp.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Purpose
@@ -19,4 +21,4 @@ Choosing recipes can be difficult and sometimes choices are limited; recipe find
 
 ## Future Development Ideas
 * Add search capability for food categories and locale
-* Additional styling 
+* Additional styling
