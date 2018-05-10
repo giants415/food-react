@@ -17,4 +17,6 @@ Choosing recipes can be difficult and sometimes choices are limited; recipe find
 * Lodash
 
 
-## Interesting
+## Future Development Ideas
+* Add search capability for food categories and locale
+* Additional styling 
