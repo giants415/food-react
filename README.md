@@ -17,6 +17,7 @@ Choosing recipes can be difficult and sometimes choices are limited; recipe find
 * Redux Promise
 * Axios
 * Lodash
+* HTML5, CSS3, Javascript (ES6)
 
 
 ## Future Development Ideas
