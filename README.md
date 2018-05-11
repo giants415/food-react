@@ -23,3 +23,4 @@ Choosing recipes can be difficult and sometimes choices are limited; recipe find
 ## Future Development Ideas
 * Add search capability for food categories and locale
 * Additional styling
+* Refactor styling code out of components and into single style sheet
